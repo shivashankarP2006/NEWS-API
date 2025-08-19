@@ -1,0 +1,71 @@
+img{
+    width: 1050px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: auto;
+
+
+}h1{
+overflow: hidden;;
+ text-align: center;
+ text-decoration: dotted underline; 
+ text-overflow: ellipsis; 
+font-size: 3em;
+padding: 10px;
+color: rgb(17, 81, 154);
+background-color: rgba(255, 255, 255, 0.8);
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+}
+label{
+ display: block;
+ font-size: 1.6em;
+ color: rgb(80, 15, 130);
+ margin-bottom: 10px;
+border-radius: 10px;
+ padding: 5px;
+ background-color: rgba(255, 255, 255, 0.8);
+ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+select{
+    font-display: swap;
+    font-size: 1.2em;
+    color: rgb(107, 15, 15);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgb(15, 1, 1);
+    color: #160101;
+    cursor: pointer;
+    outline: none;
+    
+}
+select:hover{
+    background: linear-gradient(45deg, #ff7eb3, #65d6ce);
+    color:#10090c
+}
+select:focus-visible{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.news-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.news-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #114f9a;
+}
+
+.news-card p {
+  margin: 0 0 10px;
+  color: #333;
+}
+.news-card a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
