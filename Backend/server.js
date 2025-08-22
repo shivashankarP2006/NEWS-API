@@ -27,7 +27,8 @@ app.get("/news", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}/news`);
+  console.log(`✅ Server running at http://localhost:${PORT}/`);
   console.log("API Key from .env:", API_KEY);
 });
+
 
