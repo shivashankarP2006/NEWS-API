@@ -13,9 +13,9 @@ app.use(cors());
 app.get("/news", async (req, res) => {
   const category = req.query.category || "general";
   try {
-         const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`
-    );
+       const response = await fetch(
+      `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`
+);
     const data = await response.json();
     res.json(data);
   } catch (error) {
