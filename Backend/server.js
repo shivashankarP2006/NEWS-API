@@ -9,6 +9,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
+app.get("/", (req, res) => {
+  res.send("✅ News API Backend is running! Use /news?category=general");
+});
 
 app.get("/news", async (req, res) => {
   const category = req.query.category || "general";
@@ -27,3 +30,4 @@ app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}/news`);
   console.log("API Key from .env:", API_KEY);
 });
+
