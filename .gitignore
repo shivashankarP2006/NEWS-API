@@ -1,0 +1,13 @@
+# Ignore real environment files
+.env
+
+# Allow example env file to be tracked
+!.env.example
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
