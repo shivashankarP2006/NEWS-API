@@ -1,21 +1,23 @@
 const newsbox = document.getElementById('news');
 const categorySelect = document.getElementById('category');
-const apiurl = 'https://news-api-project-c4n1.onrender.com';
+const apiurl = 'https://news-api-project-c4n1.onrender.com'; // ✅ base URL
 
 async function news(category = 'general') {
     try {
-        const res = await fetch(`${apiurl}/news?category=${category}`);
+        const res = await fetch(`${apiurl}/news?category=${category}`); // ✅ correct fetch
 
         if (!res.ok) {
             throw new Error('Network response was not ok');
         }
+
         const data = await res.json();
         newsbox.innerHTML = '';
+
         if (!data.articles || data.articles.length === 0) {
             newsbox.innerHTML = '<p>No news found.</p>';
             return;
         }
-        
+
         data.articles.forEach(item => {
             const articleDiv = document.createElement('div');
             articleDiv.className = 'news-card';
@@ -33,11 +35,10 @@ async function news(category = 'general') {
         newsbox.innerHTML = 'Failed to load news.';
     }
 }
+
 categorySelect.addEventListener("change", e => {
-  news(e.target.value);
+    news(e.target.value);
 });
 
 // Load default on page load
-
 news();
-
