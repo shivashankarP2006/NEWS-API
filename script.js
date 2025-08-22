@@ -1,6 +1,6 @@
 const newsbox = document.getElementById('news');
 const categorySelect = document.getElementById('category');
-const apiurl = 'http://localhost:3000/news';
+const apiurl = 'https://news-api-project-c4n1.onrender.com/news';
 async function news(category = 'general') {
     try {
        const res = await fetch(`${apiurl}?category=${category}`);
@@ -37,4 +37,5 @@ categorySelect.addEventListener("change", e => {
 });
 
 // Load default on page load
+
 news();
