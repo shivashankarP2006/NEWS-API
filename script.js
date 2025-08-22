@@ -1,9 +1,10 @@
 const newsbox = document.getElementById('news');
 const categorySelect = document.getElementById('category');
-const apiurl = 'https://news-api-project-c4n1.onrender.com/news';
+const apiurl = 'https://news-api-project-c4n1.onrender.com';
+
 async function news(category = 'general') {
     try {
-       const res = await fetch(`${apiurl}?category=${category}`);
+        const res = await fetch(`${apiurl}/news?category=${category}`);
 
         if (!res.ok) {
             throw new Error('Network response was not ok');
@@ -39,3 +40,4 @@ categorySelect.addEventListener("change", e => {
 // Load default on page load
 
 news();
+
